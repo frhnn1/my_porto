@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading</title>
+  <script>
+    // Cek ukuran layar dan redirect sesuai dengan perangkat
+    window.onload = function() {
+      if (window.innerWidth <= 768) {  // Ukuran layar mobile (tablet dan mobile)
+        window.location.href = "mobile.html"; // Arahkan ke file mobile
+      } else {
+        window.location.href = "desktop.html"; // Arahkan ke file desktop
+      }
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

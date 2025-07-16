@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Farhan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/FavIcon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/FavIcon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/FavIcon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    h1, h2, h3, h5, .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #1f1f1fcc;
+      backdrop-filter: blur(6px);
+    }
+    #home img {
+      width: 250px;
+      box-shadow: 0 0 20px #61dafb;
+      border-radius: 50%;
+      border: 4px solid aqua;
+    }
+    #home h2 {
+      color: #61dafb;
+    }
+    #aboutborder {
+      border: 2px solid aqua;
+      box-shadow:0 0 10px #61dafb;
+      border-radius: 20px;
+    }
+    #cv {
+      color: gray;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px red;
+    }
+    #cv:hover {
+      color: white;
+      border: none;
+      box-shadow:0 0 12px #61dafb;
+    }
+
+    .navbar {
+      background-color: #121212;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      position: relative;
+      display: inline-block;
+      color: #fff !important;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+      padding-bottom: 5px;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, #00e0ff, #61dafb);
+      transition: width 0.4s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #61dafb !important;
+    }
+    .dropdown-menu {
+      background-color: #1e1e1e;
+    }
+    .dropdown-menu li a {
+      color: white;
+    }
+
+    .typewriter {
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 380px;
+      margin: auto;
+      font-size: 1.3rem;
+      animation: blink-caret 0.75s step-end infinite;
+      color: aqua;
+      text-shadow: 0 0 8px #00e5ff88;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: gray; }
+    }
+
+    #skill {
+      border: 2px solid aqua;
+      box-shadow:0 0 10px #61dafb;
+      border-radius: 20px;
+    }
+    #skill ul li {
+      text-align: start;
+      list-style: none;
+    }
+
+    #contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #contact img {
+      width: 30px;
+      margin-right: 15px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px red;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 0 30px #61dafb;
+    }
+
+    .card img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    #cards {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      #cards {
+        flex-direction: column !important;
+        padding: 20px;
+      }
+
+      #cards > .d-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      #cards .card {
+        width: 100% !important;
+        max-width: 300px;
+      }
+      #home img {
+        width: 180px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a style="color: #61dafb;" class="navbar-brand" href="index.html"><em>MyPorto</em></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navm">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navm">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#experience">My Experience</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid text-center">
+    <div class="row align-items-center text-white">
+      <div id="home" class="col-12 mt-4">
+        <img class="mt-4" src="/my_porto2/assets/me2.jpg" alt="" data-aos="zoom-in" />
+        <h2 class="mt-2">Moch. Farhan</h2>
+        <h5 class="typewriter" id="typing-text"></h5>
+      </div>
+    </div>
+
+
+  <!-- About and My Skill -->
+    <section id="about" class="container-fluid">
+  <div class="container-fluid mt-4">
+    <div class="container d-flex flex-wrap gap-4">
+      <div id="aboutborder" class="col-lg-8 col-12 p-3" data-aos="fade-right">
+        <h2 style="color: white;">About Me</h2>
+        <p>
+          Haloo nama saya Moch. Farhan, siswa SMK YADIKA SOREANG dengan jurusan Rekayasa Perangkat Lunak (RPL). Selama masa studi, saya aktif belajar dan mengembangkan keterampilan di bidang pemrograman, pengembangan aplikasi, dan teknologi web. Saya memiliki semangat tinggi dalam dunia teknologi, senang mencoba hal-hal baru, dan siap untuk terus belajar agar bisa memberikan kontribusi terbaik di dunia industri digital.
+        </p>
+        <a id="cv" href="/my_porto2/files/CVMochamadFarhan.pdf" class="btn mt-3" download>Download CV</a>
+      </div>
+      <div id="skill" class="col-lg-3 col-12 p-3" data-aos="fade-left">
+        <h2 style="color: white;">My Skill</h2>
+        <ul>
+          <li>🔹 HTML</li>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+          
+          <li>🔹 CSS</li>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+
+          <li>🔹 JavaScript Dasar</li>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+
+          <li>🔹 PHP Dasar</li>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+
+          <li>🔹 GdScript</li>
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+
+        </ul>
+      </div>
+</div>
+    </section>
+
+  <!--Experience-->
+      <div class="container">
+            <h2 class="mt-5" style="color: white;">My Experience</h2>
+          </div>
+          <div id="cards" class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="d-flex gap-5">
+              <a href="/my_porto2/halaman_experience/kalku1,0.php">
+                <div class="card" style="width: 18rem;" data-aos="fade-right">
+                <img src="/my_porto2/assets/Kalkul.png " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Membuat Kalkulator Sederhana</p>
+                </div>
+              </div>
+            </a>
+            <a href="/my_porto2/halaman_experience/game1,0.php">
+            <div class="d-flex gap-5">
+              <div class="card" style="width: 18rem;" data-aos="zoom-in">
+                <img src="/my_porto2/assets/game1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Membuat Game 2D</p>
+                </div>
+              </div>
+            </div>
+            </a>
+            <a href="/my_porto2/halaman_experience/login1,0.php">
+              <div class="card" style="width: 18rem;" data-aos="fade-left">
+                <img src="/my_porto2/assets/loginr.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Membuat Register & Login Form</p>
+                </div>
+              </div>
+            </a>
+              </div>
+            </div>
+</div>
+
+    <!-- Contact -->
+  <section id="contact" class="container-fluid py-4">
+    <div class="container col-4" data-aos="fade-up">
+      <h2 class="text-center mt-5">My Contact</h2><br>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><img src="/my_porto2/assets/wa.png"><a href="https://wa.me/6283126236867" target="_blank">Whatsapp</a></li><br>
+        <li><img src="/my_porto2/assets/ig.png"><a href="https://www.instagram.com/_fhndwii" target="_blank">Instagram</a></li><br>
+        <li><img src="/my_porto2/assets/gmail.png"><a href="mailto:farhanmoch285@gmail.com" target="_blank">Gmail</a></li><br>
+      </ul>
+    </div>
+  </section>
+
+    <!-- Footer -->
+<footer class="bg-white text-black text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 Hann. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "Welcome to my Portfolio";
+      const target = document.getElementById("typing-text");
+      let index = 0;
+
+      function typeLetter() {
+        if (index < text.length) {
+          target.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeLetter, 150);
+        }
+      }
+
+      typeLetter();
+    });
+
+    AOS.init({ duration: 1500, once: true });
+  </script>
+</body>
+</html>
